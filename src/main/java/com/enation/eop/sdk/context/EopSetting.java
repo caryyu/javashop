@@ -207,8 +207,8 @@ public class EopSetting {
 		
 		PRODUCTID = props.getProperty("productid");
 		if(PRODUCTID==null) PRODUCTID="";
-		
-		File installLockFile = new File(StringUtil.getRootPath()+"/install/install.lock");
+
+		File installLockFile = new File(props.getProperty("install.lock"));
 		if( installLockFile.exists() ){
 			INSTALL_LOCK = "YES"; //如果存在则不能安装
 		}else{
