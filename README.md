@@ -6,6 +6,13 @@
 
 ## Description
 
+## 运行方式
+### 下载WAR包部署
+参考Release描述进行部署，适用于JAVA熟练者的方式。
+### 使用Docker运行
+```
+docker run -d -p 8080:8080 caryyu/javashop
+```
 
 ## 修改历史
 1、Javascript脚本执行功能使用ScriptEngine，去除了（js.jar/js-14.jar）依赖；  
