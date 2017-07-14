@@ -130,6 +130,7 @@ public class EopSetting {
 			InputStream in  = FileUtil.getResourceAsStream("eop.properties");
 			Properties props = new Properties();
 			props.load(in);
+			props.putAll(System.getProperties());
 			init(props);
 		}catch(Exception e){
 			e.printStackTrace();
