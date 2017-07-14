@@ -14,6 +14,9 @@
 docker run -d -p 8080:8080 caryyu/javashop
 ```
 
+## 访问方式
+通过浏览器打开链接地址"http://localhost:8080/javashop/"即可进入安装向导。
+
 ## 修改历史
 1、Javascript脚本执行功能使用ScriptEngine，去除了（js.jar/js-14.jar）依赖；  
 2、JPEG图片生成采用ImageIO类进行处理，去除了"com.sun.*"包的直接使用；  
