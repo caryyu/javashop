@@ -1,5 +1,7 @@
 package com.enation.framework.util;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -379,6 +381,10 @@ public class StringUtil {
 	 * @return
 	 */
 	public static String getRootPath() {
+		String webContextPath = System.getProperty("webcontext.path");
+
+		if(StringUtils.isNotEmpty(webContextPath)){return webContextPath;}
+
 		// return "E:/javatool/apache-tomcat-6.0.18/webapps/user_test";
 		String filePath = Thread.currentThread().getContextClassLoader()
 				.getResource("").toString();

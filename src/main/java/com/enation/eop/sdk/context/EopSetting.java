@@ -130,7 +130,6 @@ public class EopSetting {
 			InputStream in  = FileUtil.getResourceAsStream("eop.properties");
 			Properties props = new Properties();
 			props.load(in);
-			props.putAll(System.getProperties());
 			init(props);
 		}catch(Exception e){
 			e.printStackTrace();
@@ -139,7 +138,6 @@ public class EopSetting {
 	 
 	
 	public static void init(Properties props ){
-		
 		String encoding =  props.getProperty("encoding");
 		ENCODING  = StringUtil.isEmpty(encoding) ? "": encoding;
 		
@@ -209,7 +207,7 @@ public class EopSetting {
 		PRODUCTID = props.getProperty("productid");
 		if(PRODUCTID==null) PRODUCTID="";
 
-		File installLockFile = new File(props.getProperty("install.lock"));
+		File installLockFile = new File(StringUtil.getRootPath()+"/install/install.lock");
 		if( installLockFile.exists() ){
 			INSTALL_LOCK = "YES"; //如果存在则不能安装
 		}else{
