@@ -18,7 +18,7 @@
 <a target="_blank" href="http://${domain }:<%=request.getServerPort()%><%=request.getContextPath() %>/index.html">点此查看网站前台</a>
 <br>
 <br>
-<a target="_blank" href="http://${domain }:<%=request.getServerPort()%><%=request.getContextPath() %>/admin">点此登录商店系统后台管理</a>
+<a target="_blank" href="http://${domain }:<%=request.getServerPort()%><%=request.getContextPath() %>/admin/">点此登录商店系统后台管理</a>
 <%}else{ %>
 <a target="_blank" href="../index.html">点此查看网站前台</a>
 <br>
